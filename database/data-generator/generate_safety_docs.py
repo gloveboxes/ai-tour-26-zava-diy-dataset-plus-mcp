@@ -639,7 +639,7 @@ def markdown_to_pdf_paragraphs(markdown_text: str, styles) -> List:
     
     return paragraphs
 
-def create_pdf_document(content: str, filename: str, output_dir: str = "../../manuals") -> str:
+def create_pdf_document(content: str, filename: str, output_dir: str = "/workspace/manuals") -> str:
     """Create a PDF document from markdown content"""
     # Create output directory if it doesn't exist
     Path(output_dir).mkdir(parents=True, exist_ok=True)
@@ -769,7 +769,7 @@ async def generate_safety_documents(conn: asyncpg.Connection, max_products: Opti
         
         # Create SDS PDF
         sds_filename = f"{sku}_SDS.pdf"
-        sds_path = create_pdf_document(sds_document, sds_filename, "../../manuals")
+        sds_path = create_pdf_document(sds_document, sds_filename, "/workspace/manuals")
         created_files.append(sds_path)
         pdf_count += 1
         
@@ -788,7 +788,7 @@ async def generate_safety_documents(conn: asyncpg.Connection, max_products: Opti
         
         # Create Compliance PDF
         compliance_filename = f"{sku}_COMPLIANCE.pdf"
-        compliance_path = create_pdf_document(compliance_document, compliance_filename, "../../manuals")
+        compliance_path = create_pdf_document(compliance_document, compliance_filename, "/workspace/manuals")
         created_files.append(compliance_path)
         pdf_count += 1
         
@@ -796,7 +796,7 @@ async def generate_safety_documents(conn: asyncpg.Connection, max_products: Opti
         if random.random() < 0.4:  # 40% of products get quirks document
             quirks_document = generate_zava_quirks_document(product_dict, product['category'])
             quirks_filename = f"{sku}_QUIRKS.pdf"
-            quirks_path = create_pdf_document(quirks_document, quirks_filename, "../../manuals")
+            quirks_path = create_pdf_document(quirks_document, quirks_filename, "/workspace/manuals")
             created_files.append(quirks_path)
             pdf_count += 1
         
@@ -804,7 +804,7 @@ async def generate_safety_documents(conn: asyncpg.Connection, max_products: Opti
         if random.random() < 0.3:  # 30% get environmental statements
             env_document = generate_environmental_statement(product_dict, product['category'])
             env_filename = f"{sku}_ENVIRONMENTAL.pdf"
-            env_path = create_pdf_document(env_document, env_filename, "../../manuals")
+            env_path = create_pdf_document(env_document, env_filename, "/workspace/manuals")
             created_files.append(env_path)
             pdf_count += 1
     
@@ -836,9 +836,9 @@ async def main() -> None:
         await generate_safety_documents(conn)  # Generate for ALL products
         
         # Show directory contents
-        safety_docs_path = Path("safety_docs")
-        if safety_docs_path.exists():
-            pdf_files = list(safety_docs_path.glob("*.pdf"))
+        manuals_path = Path("/workspace/manuals")
+        if manuals_path.exists():
+            pdf_files = list(manuals_path.glob("*.pdf"))
             logging.info(f"Total PDF files created: {len(pdf_files)}")
             
             # Group by document type
