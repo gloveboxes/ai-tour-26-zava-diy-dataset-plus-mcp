@@ -2,6 +2,12 @@
 
 A comprehensive demonstration project featuring a realistic PostgreSQL dataset for **Zava DIY**, a fictional home improvement retail company, combined with two specialized Model Context Protocol (MCP) servers. This project showcases advanced retail analytics, AI-powered product search capabilities, and secure multi-store data access patterns.
 
+## Example Workshop Documentation
+
+Click the links below to view the example workshop documentation:
+
+(https://gloveboxes.github.io/ai-tour-26-zava-diy-dataset-plus-mcp/)
+
 ## Project Overview
 
 This project provides:

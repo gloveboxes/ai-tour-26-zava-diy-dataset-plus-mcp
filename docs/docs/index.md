@@ -30,6 +30,8 @@ The workshop focuses on several key technologies that are reshaping the AI lands
 - **Real-time Data Processing:** Techniques for handling and analyzing streaming data
 - **Cloud Integration:** Deploying AI solutions at scale
 
+You can learning more about [Azure AI Foundry Agent Service](https://learn.microsoft.com/azure/ai-foundry/){:target "_blank"} and how it integrates with the Model Context Protocol (MCP) to create intelligent, agentic applications
+
 ## Why This Matters
 
 Artificial Intelligence is transforming every industry, and understanding how to effectively implement AI solutions is crucial for:
