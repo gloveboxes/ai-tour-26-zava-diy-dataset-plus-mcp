@@ -6,7 +6,7 @@ A comprehensive demonstration project featuring a realistic PostgreSQL dataset f
 
 Click the links below to view the example workshop documentation:
 
-(https://gloveboxes.github.io/ai-tour-26-zava-diy-dataset-plus-mcp/)
+[Documents](https://gloveboxes.github.io/ai-tour-26-zava-diy-dataset-plus-mcp/)
 
 ## Project Overview
 
