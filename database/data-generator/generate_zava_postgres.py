@@ -263,6 +263,22 @@ async def create_database_schema(conn):
             )
         """)
         
+        # Create product_documents table for unstructured content (RAG/RAFT suitable)
+        await conn.execute(f"""
+            CREATE TABLE IF NOT EXISTS {SCHEMA_NAME}.product_documents (
+                document_id SERIAL PRIMARY KEY,
+                product_id INTEGER,
+                document_type TEXT NOT NULL,
+                title TEXT NOT NULL,
+                content TEXT NOT NULL,
+                content_embedding vector(1536),
+                metadata JSONB,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (product_id) REFERENCES {SCHEMA_NAME}.products (product_id)
+            )
+        """)
+        
         # Create optimized performance indexes
         logging.info("Creating performance indexes...")
         
@@ -303,6 +319,13 @@ async def create_database_schema(conn):
         # Product embeddings indexes
         await conn.execute(f"CREATE INDEX IF NOT EXISTS idx_product_embeddings_product ON {SCHEMA_NAME}.product_embeddings(product_id)")
         await conn.execute(f"CREATE INDEX IF NOT EXISTS idx_product_embeddings_url ON {SCHEMA_NAME}.product_embeddings(image_url)")
+        
+        # Product documents indexes for RAG/search
+        await conn.execute(f"CREATE INDEX IF NOT EXISTS idx_product_documents_type ON {SCHEMA_NAME}.product_documents(document_type)")
+        await conn.execute(f"CREATE INDEX IF NOT EXISTS idx_product_documents_product ON {SCHEMA_NAME}.product_documents(product_id)")
+        await conn.execute(f"CREATE INDEX IF NOT EXISTS idx_product_documents_title ON {SCHEMA_NAME}.product_documents(title)")
+        await conn.execute(f"CREATE INDEX IF NOT EXISTS idx_product_documents_metadata ON {SCHEMA_NAME}.product_documents USING GIN(metadata)")
+        await conn.execute(f"CREATE INDEX IF NOT EXISTS idx_product_documents_content_search ON {SCHEMA_NAME}.product_documents USING GIN(to_tsvector('english', content))")
         
         # Vector similarity index for product embeddings (if pgvector is available)
         try:
@@ -459,6 +482,15 @@ async def create_database_schema(conn):
         await conn.execute(f"DROP POLICY IF EXISTS all_users_product_embeddings ON {SCHEMA_NAME}.product_embeddings")
         await conn.execute(f"""
             CREATE POLICY all_users_product_embeddings ON {SCHEMA_NAME}.product_embeddings
+            FOR ALL TO PUBLIC
+            USING (true)
+        """)
+        
+        # Product documents table - all users can see all product documents
+        await conn.execute(f"ALTER TABLE {SCHEMA_NAME}.product_documents ENABLE ROW LEVEL SECURITY")
+        await conn.execute(f"DROP POLICY IF EXISTS all_users_product_documents ON {SCHEMA_NAME}.product_documents")
+        await conn.execute(f"""
+            CREATE POLICY all_users_product_documents ON {SCHEMA_NAME}.product_documents
             FOR ALL TO PUBLIC
             USING (true)
         """)
