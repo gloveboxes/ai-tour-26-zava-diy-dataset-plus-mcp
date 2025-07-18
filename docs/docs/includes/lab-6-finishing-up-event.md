@@ -1,11 +1,43 @@
-That's all for the lab portion of this workshop. Read on for key takeaways and additional resources, but first let's make it easy for you to retrieve and re-use this workshop material back home.
+## Finishing Up - Event Attendees
 
-## Star the GitHub Repository
+Congratulations on completing the workshop! Here's how to wrap up your session and take your learning further.
 
-If you have a GitHub account, you can "star" this repository to make it easy for you to find again in the future.
+## Before You Leave
 
-* Visit the GitHub repository at: [github.com/gloveboxes/Unlock-your-agents-potential-with-Model-Context-Protocol-PostgreSQL-Workshop](https://github.com/gloveboxes/Unlock-your-agents-potential-with-Model-Context-Protocol-PostgreSQL-Workshop){:target="_blank"}
-* Log into your GitHub account
-* Click **Star** in the top right
+### 1. Save Your Work
+- Take screenshots of your completed projects
+- Note down any important commands or configurations you used
+- Copy any code snippets you found particularly useful
 
-To find this workshop again in the future, click your GitHub profile picture in the top-right and click **Your stars**.
+### 2. Clean Up Your Environment
+- Your Skillable lab environment will automatically expire
+- No manual cleanup is required
+- Close your browser tabs when you're finished
+
+### 3. Connect with the Community
+- Join the workshop community channels (links provided by organizers)
+- Exchange contact information with fellow attendees
+- Follow the workshop instructors on social media
+
+## Take Your Learning Further
+
+### Immediate Next Steps
+- Review the workshop materials shared by instructors
+- Try rebuilding the project in your own environment
+- Experiment with the variations suggested during the workshop
+
+### Resources to Explore
+- **Star the workshop GitHub repository** - Click the star button on GitHub to bookmark it for easy access later
+- Official documentation for the technologies covered
+- Community forums and discussion groups
+
+### Stay Connected
+- Follow up on any questions with the workshop team
+- Share your projects and progress with the community
+- Attend future workshops and events
+
+## Thank You!
+
+Thank you for attending and participating actively in the workshop. Your engagement made this a great learning experience for everyone!
+
+**Remember:** The real learning happens when you apply these concepts to your own projects.

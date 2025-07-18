@@ -1,4 +1,4 @@
-# Getting Started
+## Getting Started
 
 Select your workshop experience:
 

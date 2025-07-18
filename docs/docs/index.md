@@ -1,58 +1,55 @@
-# Unlock your agents potential with Model Context Protocol and PostgreSQL Workshop
+## Welcome to the AI Workshop Documentation
 
-## A 75-minute interactive workshop
+This is the starting page for the AI Workshop documentation built with MkDocs. Here you'll find a comprehensive guide to understanding and implementing artificial intelligence solutions using modern tools and technologies.
 
-Imagine you are a sales manager at Zava, a retail DIY company with stores across Washington State and a growing online presence. You specialize in outdoor equipment, home improvement tools, and DIY supplies. 
+## Workshop Overview
 
-You need to analyze sales data to find trends, understand customer preferences, and make informed business decisions. To help you, Zava has developed a conversational agent that can answer questions about your sales data and even help customers find products using image search.
+This workshop is designed to provide hands-on experience with cutting-edge AI technologies and their practical applications in real-world scenarios. Whether you're a developer, data scientist, or technology enthusiast, this workshop will equip you with the knowledge and skills needed to leverage AI effectively.
 
-![Zava Sales Analysis Agent](media/persona.png)
+![](media/persona.png)
 
-## What you will learn in the workshop
+## Duration
 
-Learn to build an AI agent that analyzes sales data, answers product questions, and helps customers find products using image search. Key topics:
+**Estimated Time:** 4-6 hours
+- Self-paced learning modules
+- Hands-on coding exercises
+- Interactive demonstrations
+- Q&A sessions
 
-1. **Model Context Protocol (MCP)**: Universal access to data sources for LLMs.
-2. **LLMs with PostgreSQL via MCP**: Complex queries and image retrieval.
-3. **Azure AI Foundry**: Rapidly build and deploy AI agents with integrated tools and observability.
+## Scenario
 
-### Just starting your AI Agents journey?
+You'll be working with a retail dataset from Zava DIY, a fictional home improvement store. Throughout the workshop, you'll build intelligent systems that can analyze sales data, provide customer insights, and automate business processes using AI-powered tools and services.
 
-If you're new to AI agents, start with the [Build your code-first agent with Azure AI Foundry](https://aka.ms/aitour/WRK552){:target="_blank"} workshop. You'll learn to build a code-first agent using Azure AI Foundry, integrating LLMs with databases, documents, and Bing search — a solid foundation for more advanced agents like the Zava Agent.
+## Technology Stack
 
-## What is an LLM-Powered AI Agent?
+The workshop focuses on several key technologies that are reshaping the AI landscape:
 
-A Large Language Model (LLM) powered AI Agent is semi-autonomous software designed to achieve a given goal without requiring predefined steps or processes. Instead of following explicitly programmed instructions, the agent determines how to accomplish a task using instructions and context.
+- **Model Context Protocol (MCP):** A standardized protocol for AI model communication and integration
+- **Large Language Models (LLMs):** Advanced AI models for natural language processing and understanding
+- **Python & Modern Frameworks:** Industry-standard tools for AI development
+- **Real-time Data Processing:** Techniques for handling and analyzing streaming data
+- **Cloud Integration:** Deploying AI solutions at scale
 
-For example, if a user asks, "**Show the total sales for each store as a pie chart**", the app doesn't rely on predefined logic for this request. Instead, the LLM interprets the request, manages the conversation flow and context, and orchestrates the necessary actions to produce the store sales pie chart.
+## Why This Matters
 
-Unlike traditional applications, where developers define the logic and workflows to support business processes, AI Agents shift this responsibility to the LLM. In these systems, prompt engineering, clear instructions, and tool development are critical to ensuring the app performs as intended.
+Artificial Intelligence is transforming every industry, and understanding how to effectively implement AI solutions is crucial for:
 
-## Introduction to the Azure AI Foundry
+- **Business Innovation:** Creating competitive advantages through intelligent automation
+- **Data-Driven Decisions:** Extracting actionable insights from complex datasets
+- **Customer Experience:** Building more personalized and responsive services
+- **Operational Efficiency:** Streamlining processes and reducing manual overhead
+- **Future-Proofing Skills:** Staying relevant in an increasingly AI-driven world
 
-[Azure AI Foundry](https://azure.microsoft.com/products/ai-foundry/){:target="_blank"} is Microsoft’s secure, flexible platform for designing, customizing, and managing AI apps and agents. Everything—models, agents, tools, and observability—lives behind a single portal, SDK, and REST endpoint, so you can ship to cloud or edge with governance and cost controls in place from day one.
+## What You'll Learn
 
-![Azure AI Foundrt Architecture](media/azure-ai-foundry.png)
+By the end of this workshop, you will have gained practical experience with:
 
-## What is the Foundry Agent Service?
+- Setting up and configuring AI development environments
+- Implementing Model Context Protocol (MCP) servers and clients
+- Building intelligent data analysis pipelines
+- Creating AI-powered web applications
+- Integrating multiple AI services and tools
+- Best practices for AI solution architecture
+- Real-world problem-solving with AI technologies
 
-The Foundry Agent Service offers a fully managed cloud service with SDKs for [Python](https://learn.microsoft.com/azure/ai-services/agents/quickstart?pivots=programming-language-python-azure){:target="_blank"}, [C#](https://learn.microsoft.com/azure/ai-services/agents/quickstart?pivots=programming-language-csharp){:target="_blank"}, and [TypeScript](https://learn.microsoft.com/azure/ai-foundry/agents/quickstart?pivots=programming-language-typescript){:target="_blank"}. The Foundry SDKs simplify AI agent development, reducing complex tasks like tool calling to just a few lines of code.
-
-!!! info
-    MCP (Model Context Protocol) provides a standardized way to connect LLMs to external tools and systems. Unlike traditional function calling, MCP offers a more robust, secure, and scalable approach to tool integration, enabling sophisticated interactions between AI agents and data sources.
-
-The Foundry Agent Service offers several advantages over traditional agent platforms:
-
-- **Rapid Deployment**: Optimized SDK for fast deployment, letting developers focus on building agents.
-- **Scalability**: Designed to handle varying user loads without performance issues.
-- **Custom Integrations**: Supports MCP (Model Context Protocol) for robust tool integration and external data access.
-- **Built-in Tools**: Includes Fabric, SharePoint, Azure AI Search, and Azure Storage for quick development.
-- **RAG-Style Search**: Features a built-in vector store for efficient file and semantic search.
-- **Conversation State Management**: Maintains context across multiple interactions.
-- **AI Model Compatibility**: Works with various AI models.
-
-Learn more about the Foundry Agent Service in the [Foundry Agent Service documentation](https://learn.microsoft.com/azure/ai-services/agents/overview){:target="_blank"}.
-
-## AI Agent Frameworks
-
-Popular agent frameworks include LangChain, Semantic Kernel, and CrewAI. What distinguishes the Foundry Agent Service is its seamless integration capabilities and an SDK optimized for rapid deployment. In complex multi-agent scenarios, solutions will combine SDKs like Semantic Kernel and AutoGen with the Foundry Agent Service to build robust and scalable systems.
+Get ready to dive deep into the world of AI and discover how these powerful technologies can transform the way we work, analyze data, and solve complex problems!

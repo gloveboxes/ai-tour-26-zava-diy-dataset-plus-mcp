@@ -1,8 +1,8 @@
-site_name: Unlock your agents potential with Model Context Protocol and PostgreSQL Workshop
+site_name: Workshop Title
 
 nav:
   - Workshop Introduction: index.md
-  - Overview of MCP: mcp-overview.md
+  - Workshop Overview: overview.md
   - Solution Architecture: architecture.md
   - Security Considerations: security.md
   - Getting Started: getting-started.md
@@ -11,14 +11,9 @@ nav:
   #   - Self-Guided Learners: introduction-self-guided.md
 
   # - Lab 1 Grounding LLMs with MCP: lab-1-mcp_intro.md
-  - Lab 1 Ground your Agent with MCP Services: lab-2-visualize-data.md
-  - Lab 2 Extending the MCP Service: lab-3-mcp-time-service.md
-  # - Lab 3 Visual Product Search: lab-3-visual-search.md
-  - Lab 3 Service Monitoring: lab-4-monitoring.md
-  - Lab 4 Continuous Evaluation: lab-5-continuous-evaluation.md
-  - Lab 5 Trace & Observe Agents: lab-5-tracing.md
-  - Lab 6 (Optional) Debugging MCPs with Dev Tunnel: lab-1-start-mcp-server.md
-  - Lab 7 Finishing Up: lab-6-finishing-up.md
+  - Lab 1 Opening the Workshop: lab-1-open-workshop.md
+  - Lab 2 ....: lab-2.md
+  - Lab 6 Finishing Up: lab-6-finishing-up.md
   - Summary: summary.md
   - Resources: resources.md
   - About: about.md
