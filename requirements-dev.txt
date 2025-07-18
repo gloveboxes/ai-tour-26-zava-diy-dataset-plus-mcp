@@ -1,4 +1,6 @@
 
+-r src/python/requirements.txt
+-r database/data-generator/requirements.txt
 black
 ruff
 pre-commit

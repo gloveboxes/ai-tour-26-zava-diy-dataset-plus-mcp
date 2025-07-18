@@ -7,16 +7,11 @@ RUN python -m pip install --upgrade pip
 RUN curl -sL https://aka.ms/DevTunnelCliInstall | bash && \
     cp /root/bin/devtunnel /usr/local/bin/devtunnel
 
-# Install the packages required to run the workshop as a student
-COPY ../src/python/requirements.txt .
-RUN pip install -r requirements.txt
-
-# Install the packages required for the data generator
-COPY ../database/data-generator/requirements.txt .
-RUN pip install -r requirements.txt
 
 # Install the packages required for development
-COPY ../requirements-dev.txt .
+COPY requirements-dev.txt .
+COPY src/python/requirements.txt src/python/
+COPY database/data-generator/requirements.txt database/data-generator/
 RUN pip install -r requirements-dev.txt
 
 ENV ENVIRONMENT=container

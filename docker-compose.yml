@@ -7,7 +7,7 @@ networks:
 services:
   db:
     image: pgvector/pgvector:pg17
-    container_name: zava-pgvector-db
+    container_name: zava-diy-pgvector-db
     ports:
       - "5432:5432"
     environment:
